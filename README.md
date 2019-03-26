@@ -1,3 +1,3 @@
 # 2019wcmj
 
-https://mdecourse.github.io/2019wcmj
+https://huang-jay.github.io/2019wcmj/
