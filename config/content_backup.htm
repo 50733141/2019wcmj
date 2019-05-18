@@ -6,7 +6,52 @@
 <p>網際內容管理</p>
 <p><span>讓學員得以利用全球資訊網發表與 (精密) 機械 (設計) 相關的內容, 並進行有效管理.</span><br/><br/><span>內容發表: Google Blogger, Github Pages</span><br/><br/><span>有效管理: 透過 API 程式整合兩者之間的內容, 包括 CMSimfly, Reveal 與 Pelican Blog 與 Blogger</span></p>
 <h1>近端配置與管理(網管)</h1>
-<h1>介紹</h1>
+<p><span style="color: #0000ff;"><strong>windows network setting</strong></span></p>
+<p></p>
+<p><strong><span style="color: #0000ff;">chrome proxy(開啟網頁後進入設定-開啟proxy設定-輸入伺服器位址及連接埠-進入進階設定將特定網址取消使用proxy)</span></strong></p>
+<p><img caption="false" height="454" src="/images/chrome proxy.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>firefox proxy(開啟網頁後點選上方工具-選項-進階-網路-設定-手動設定proxy-設定完成即可，每次登入時輸入帳號密碼)</strong></span></p>
+<p><img caption="false" height="209" src="/images/firefox proxy-1.jpg" width="400"/></p>
+<p><img alt="" height="255" src="/images/firefox proxy-2.jpg" width="400"/></p>
+<p><img alt="" height="407" src="/images/firefox proxy-3.jpg" width="400"/></p>
+<p><img alt="" height="185" src="/images/firefox proxy-4.jpg" width="400"/></p>
+<p><span style="color: #0000ff;"><strong>mde.tw(網頁搜尋:mde.tw即可登入課程網頁)</strong></span></p>
+<p><img caption="false" height="55" src="/images/mde.tw.png" width="400"/></p>
+<p><img caption="false" height="336" src="/images/mde.tw_2.png" width="700"/></p>
+<p><strong><span style="color: #0000ff;">github.com(網頁搜尋:github.com-輸入帳號密碼即可登入自己的github)</span></strong></p>
+<p><img caption="false" height="300" src="/images/login github add repo_1.png" width="239"/></p>
+<p></p>
+<p><strong><span style="color: #0000ff;">portable programming system</span></strong></p>
+<p><img alt="" height="227" src="/images/portable programming system.png" width="300"/></p>
+<p><img alt="" height="466" src="/images/portable programming system_2.png" width="500"/></p>
+<p><span style="color: #0000ff;"><strong>portablegit - remove helper = manager</strong></span></p>
+<p><img alt="" height="483" src="/images/portablegit - remove helper = manager.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>login github add repository - README.md</strong></span></p>
+<p><img alt="" height="567" src="/images/login github add repo_2.png" width="700"/></p>
+<p><img alt="" height="411" src="/images/login github add repo_4.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>git clone  self-repo and CMSimfly</strong></span></p>
+<p><img alt="" height="394" src="/images/git clone_1.png" width="700"/></p>
+<p><img alt="" height="131" src="/images/git clone_2.png" width="500"/></p>
+<p><img alt="" height="394" src="/images/cmsimfly 範例網站 git clone_3.png" width="700"/></p>
+<p><img alt="" height="665" src="/images/git clone_4.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>y:\home\.gitconfig</strong></span></p>
+<p><img alt="" height="155" src="/images/chrome_nMcNdQKBYB.png" width="700"/></p>
+<p><strong><span style="color: #0000ff;">git config --global user.name "scrum-4"</span></strong><br/><strong><span style="color: #0000ff;">git config --global user.email "scrum4@mde.tw"</span></strong></p>
+<p><img alt="" height="54" src="/images/git config name and email.png" width="300"/><br/><span style="color: #0000ff;"><strong>git config --global http.proxy <a href="http://140.130.17.3:3128/" style="color: #0000ff;">http://140.130.17.3:3128</a></strong></span></p>
+<p><img alt="" height="38" src="/images/git config --global http.proxy.png" width="300"/></p>
+<p><span style="color: #0000ff;"><strong>git add .</strong></span></p>
+<p><span style="color: #0000ff;"><strong>git commit -m "commit description"</strong></span></p>
+<p><span style="color: #0000ff;"><strong>git push</strong></span></p>
+<p><img alt="" height="365" src="/images/SciTE_HfnCjG7TVt.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>Github Pages - setting, url</strong></span></p>
+<p><img caption="false" height="429" src="/images/Github Pages - setting, url_1.png" width="500"/></p>
+<p><span style="color: #0000ff;"><strong>local python wsgi.py</strong></span></p>
+<p><img caption="false" height="313" src="/images/local python wsgi.py_1.png" width="600"/></p>
+<p><img alt="" height="338" src="/images/local python wsgi.py_2.png" width="600"/></p>
+<p><span style="color: #0000ff;"><strong>ssh vs https (y:\home\.ssh\config)</strong></span></p>
+<p><img caption="false" height="289" src="/images/ssh vs https.png" width="800"/></p>
+<p><span style="color: #0000ff;"><strong>.git/config (url = <a href="mailto:git@github.com:scrum-4/2019wcmj.git" style="color: #0000ff;">git@github.com:scrum-4/2019wcmj.git</a>)</strong></span></p>
+<p><img alt="" height="212" src="/images/.git_config.png" width="900"/></p><h1>介紹</h1>
 <p>分支網頁將會介紹本網頁所使用相關結構、程式碼、編輯.......等相關資訊</p>
 <h2>目錄結構</h2>
 <p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
