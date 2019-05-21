@@ -117,7 +117,8 @@ ctx.closePath()
 # 填色設為白色
 ctx.fillStyle = '#fff'
 ctx.fill()
-</script><h1>CMSimfly網頁簡介</h1>
+</script>
+<h1>CMSimfly網頁簡介</h1>
 <p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
 <p>本網頁進度內容(week4、week5......)及影片皆取自<a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a>網際內容管理網誌。將每周導師所教學之內容更新於此網頁。</p>
 <h1>網際內容管理</h1>
@@ -1126,7 +1127,8 @@ Host github.com_user2
 <h1>week_13</h1>
 <p>本周內容:和同學們清楚說明w1-w13從創立github帳號、github Pages、網路設定、相關指令應用......等內容。相關內容將於本網頁的<span style="color: #ff0000;"><strong>近端配置與管理(網管)</strong></span>頁面與大家介紹，感謝。</p>
 <h1>week_14</h1>
-<p>本周內容:將<a href="http://mde.tw/wcm2019/content/ROC%20flag.html">http://mde.tw/wcm2019/content/ROC%20flag.html</a>的國旗標誌加入自己的網頁(已新增在第一分頁:國旗)</p>
+<p>本周內容:將<a href="http://mde.tw/wcm2019/content/ROC%20flag.html">http://mde.tw/wcm2019/content/ROC%20flag.html</a>的國旗標誌加入自己的網頁<strong><span style="color: #ff0000;">(已新增在第一分頁:國旗)</span></strong></p>
+<p><strong><span style="color: #ff0000;">注意事項:因一開始更改flaskapp.py裡的內容更改完後會出現錯誤，所以必須將下列程式碼完整複製到flaskapp.py檔案並蓋過。</span></strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># coding: utf-8
 from flask import Flask, send_from_directory, request, redirect, \
     render_template, session, make_response, url_for, flash
