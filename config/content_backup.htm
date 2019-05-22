@@ -118,7 +118,63 @@ ctx.closePath()
 ctx.fillStyle = '#fff'
 ctx.fill()
 </script>
-<h1>CMSimfly網頁簡介</h1>
+<p><canvas height="400" id="plotarea3" width="600"></canvas></p>
+<script type="text/python">
+# 導入 doc
+from browser import document as doc
+import math
+
+# 準備繪圖畫布
+canvas = doc["plotarea3"]
+ctx = canvas.getContext("2d")
+def blueWhite(ctx, x, y, flag_w, flag_h):
+    # 再畫青天
+    ctx.fillStyle='rgb(0, 0, 150)'
+    #ctx.fillRect(x-flag_w/4, y-flag_h/4, flag_w/2, flag_h/2)
+    ctx.fillRect(x-flag_w/2, 0, flag_w/2, flag_h)
+    # 畫十二道光芒白日
+    ctx.beginPath()
+    star_radius = flag_w/8
+    angle = 0
+    for i in range(24):
+        angle += 5*math.pi*2/12
+        toX = x + math.cos(angle)*star_radius
+        toY = y + math.sin(angle)*star_radius
+        # 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
+        if (i):
+            ctx.lineTo(toX, toY)
+        else:
+            ctx.moveTo(toX, toY)
+    ctx.closePath()
+    # 將填色設為白色
+    ctx.fillStyle = '#fff'
+    ctx.fill()
+    # 白日:藍圈
+    ctx.beginPath()
+    ctx.arc(x, y, flag_w*17/240, 0, math.pi*2, True)
+    ctx.closePath()
+    # 填色設為藍色
+    ctx.fillStyle = 'rgb(0, 0, 149)'
+    ctx.fill()
+    # 白日:白心
+    ctx.beginPath()
+    ctx.arc(x, y, flag_w/16, 0, math.pi*2, True)
+    ctx.closePath()
+    # 填色設為白色
+    ctx.fillStyle = '#fff'
+    ctx.fill()
+# 進行座標轉換, x 軸不變, y 軸反向且移動 canvas.height 單位光點
+# ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
+# 以下採用 canvas 原始座標繪圖
+flag_w = canvas.width
+flag_h = canvas.height
+circle_x = flag_w/2
+circle_y = flag_h/2
+# 先畫滿地紅
+ctx.fillStyle='rgb(255, 0, 0)'
+ctx.fillRect(0,0,flag_w,flag_h)
+blueWhite(ctx, circle_x, circle_y, flag_w, flag_h)
+</script><h1>CMSimfly網頁簡介</h1>
 <p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
 <p>本網頁進度內容(week4、week5......)及影片皆取自<a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a>網際內容管理網誌。將每周導師所教學之內容更新於此網頁。</p>
 <h1>網際內容管理</h1>
@@ -1128,7 +1184,9 @@ Host github.com_user2
 <p>本周內容:和同學們清楚說明w1-w13從創立github帳號、github Pages、網路設定、相關指令應用......等內容。相關內容將於本網頁的<span style="color: #ff0000;"><strong>近端配置與管理(網管)</strong></span>頁面與大家介紹，感謝。</p>
 <h1>week_14</h1>
 <p>本周內容:將<a href="http://mde.tw/wcm2019/content/ROC%20flag.html">http://mde.tw/wcm2019/content/ROC%20flag.html</a>的國旗標誌加入自己的網頁<strong><span style="color: #ff0000;">(已新增在第一分頁:國旗)</span></strong></p>
-<p><strong><span style="color: #ff0000;">注意事項:因一開始更改flaskapp.py裡的內容更改完後會出現錯誤，所以必須將下列程式碼完整複製到flaskapp.py檔案並蓋過。</span></strong></p>
+<p><strong><span style="color: #ff0000;">注意事項:</span></strong></p>
+<p><strong><span style="color: #ff0000;">5/21:因一開始更改flaskapp.py裡的內容更改完後會出現錯誤，所以必須將下列程式碼完整複製到flaskapp.py檔案並蓋過。</span></strong></p>
+<p><strong><span style="color: #ff0000;">5/22:發現push之後網頁顯示會跟原來不一樣，因此先改回了原本的flaskapp.py檔案</span></strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># coding: utf-8
 from flask import Flask, send_from_directory, request, redirect, \
     render_template, session, make_response, url_for, flash
