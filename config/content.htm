@@ -2455,81 +2455,28 @@ circle_y = flag_h/2
 ctx.fillStyle='rgb(255, 0, 0)'
 ctx.fillRect(0,0,flag_w,flag_h)
 blueWhite(ctx, circle_x, circle_y, flag_w, flag_h)
-</script><h1>CMSimfly網頁簡介</h1>
-<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p>本網頁進度內容(week4、week5......)及影片皆取自<a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a>網際內容管理網誌。將每周導師所教學之內容更新於此網頁。</p>
-<h1>網際內容管理</h1>
-<p><strong>2019 Spring 課程目標</strong></p>
-<p>網際內容管理</p>
-<p><span>讓學員得以利用全球資訊網發表與 (精密) 機械 (設計) 相關的內容, 並進行有效管理.</span><br/><br/><span>內容發表: Google Blogger, Github Pages</span><br/><br/><span>有效管理: 透過 API 程式整合兩者之間的內容, 包括 CMSimfly, Reveal 與 Pelican Blog 與 Blogger</span></p>
-<h1>近端配置與管理(網管)</h1>
-<p><span style="color: #0000ff;"><strong>windows network setting(確認當下有連線到網際網路及設定正確)</strong></span></p>
-<p><img alt="" height="330" src="/images/explorer_vxOL017VGD.png" width="600"/></p>
-<p><strong><span style="color: #0000ff;">chrome proxy(開啟網頁後進入設定-開啟proxy設定-輸入伺服器位址及連接埠-進入進階設定將特定網址取消使用proxy)</span></strong></p>
-<p><img caption="false" height="454" src="/images/chrome proxy.png" width="700"/></p>
-<p><span style="color: #0000ff;"><strong>firefox proxy(開啟網頁後點選上方工具-選項-進階-網路-設定-手動設定proxy-設定完成即可，每次登入時輸入帳號密碼)</strong></span></p>
-<p><img caption="false" height="209" src="/images/firefox proxy-1.jpg" width="400"/></p>
-<p><img alt="" height="255" src="/images/firefox proxy-2.jpg" width="400"/></p>
-<p><img alt="" height="407" src="/images/firefox proxy-3.jpg" width="400"/></p>
-<p><img alt="" height="185" src="/images/firefox proxy-4.jpg" width="400"/></p>
-<p><span style="color: #0000ff;"><strong>mde.tw(網頁搜尋:mde.tw即可登入課程網頁)</strong></span></p>
-<p><img caption="false" height="55" src="/images/mde.tw.png" width="400"/></p>
-<p><img caption="false" height="336" src="/images/mde.tw_2.png" width="700"/></p>
-<p><strong><span style="color: #0000ff;">github.com(網頁搜尋:github.com-輸入帳號密碼即可登入自己的github)</span></strong></p>
-<p><img caption="false" height="300" src="/images/login github add repo_1.png" width="239"/></p>
-<p><img alt="" height="394" src="/images/mC8T4fNKwn.png" width="700"/></p>
-<p></p>
-<p><strong><span style="color: #0000ff;">portable programming system(進入<a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a>後，右方即可看到<a href="https://drive.google.com/open?id=1_TQBw1PM7jxrmtsBjvLKbjJWfGs8Ug79">2019_cdb_w5.7z</a>及<a href="https://drive.google.com/file/d/12IOfTpupXL0czFM_ZeHt-6sxfXwZK6ai/view?usp=sharing">2019_cdb_w13.7z</a>，任一下載後解壓縮即可)</span></strong></p>
-<p><img alt="" height="227" src="/images/portable programming system.png" width="300"/></p>
-<p><img alt="" height="466" src="/images/portable programming system_2.png" width="500"/></p>
-<p><span style="color: #0000ff;"><strong>portablegit - remove helper = manager(開啟start-輸入<span>git config --edit --system，即可進入下方圖面的頁面-將 credential 項目中的 helper = manager 刪除後儲存{儲存指令:wq}即可</span>)</strong></span></p>
-<p><img alt="" height="483" src="/images/portablegit - remove helper = manager.png" width="700"/></p>
-<p><span style="color: #0000ff;"><strong>login github add repository - README.md(進入github後-點選右方選項your repository-NEW-建立新的倉儲，倉儲姓名及設定好之後即可建立)</strong></span></p>
-<p><img alt="" height="567" src="/images/login github add repo_2.png" width="700"/></p>
-<p><img alt="" height="411" src="/images/login github add repo_4.png" width="700"/></p>
-<p><span style="color: #0000ff;"><strong>git clone  self-repo and CMSimfly(輸入指令cd tmp-cd 倉儲名，進入倉儲資料夾之後-輸入 git clone <a href="mailto:git@github.com:帳號名/">git@github.com:帳號名/</a>倉儲名.git，即可clone自己的倉儲，另外需取得CMSimfly倉儲內容，所以也必須將<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly</a>的內容copy到自己倉儲)</strong></span></p>
-<p><img alt="" height="394" src="/images/git clone_1.png" width="700"/></p>
-<p><img alt="" height="131" src="/images/git clone_2.png" width="500"/></p>
-<p><img alt="" height="394" src="/images/cmsimfly 範例網站 git clone_3.png" width="700"/></p>
-<p><img alt="" height="665" src="/images/git clone_4.png" width="700"/></p>
-<p><span style="color: #0000ff;"><strong>y:\home\.gitconfig(輸入指令git config --global user.name""、git config --global user.email""、git config --global http.proxy)</strong></span></p>
-<p><img alt="" height="155" src="/images/chrome_nMcNdQKBYB.png" width="700"/></p>
-<p><strong><span style="color: #0000ff;">git config --global user.name "scrum-4"</span></strong><br/><strong><span style="color: #0000ff;">git config --global user.email "scrum4@mde.tw"</span></strong></p>
-<p><img alt="" height="54" src="/images/git config name and email.png" width="300"/><br/><span style="color: #0000ff;"><strong>git config --global http.proxy http://伺服器網址+連接埠號</strong></span></p>
-<p><img alt="" height="38" src="/images/git config --global http.proxy.png" width="300"/></p>
-<p><span style="color: #0000ff;"><strong>git add .、git commit -m ""、git push(這是每次改版後必須輸入的指令，將改版內容commit及push到倉儲更新)</strong></span></p>
-<p><span style="color: #0000ff;"><strong>git add .(拍快照)</strong></span></p>
-<p><span style="color: #0000ff;"><strong>git commit -m "當次改版標題"(提交改版)</strong></span></p>
-<p><span style="color: #0000ff;"><strong>git push(上傳推到網站)</strong></span></p>
-<p><img alt="" height="365" src="/images/SciTE_HfnCjG7TVt.png" width="700"/></p>
-<p><span style="color: #0000ff;"><strong>Github Pages - setting, url(進入倉儲內的setting-下滑到Github Pages-將Source第一個選項改為master branch即可)</strong></span></p>
-<p><img caption="false" height="429" src="/images/Github Pages - setting, url_1.png" width="500"/></p>
-<p><span style="color: #0000ff;"><strong>local python wsgi.py(開啟動態網頁-步驟:cd tmp-cd 倉儲名-python wsgi.py-複製網址並貼上即可進入動態網頁)</strong></span></p>
-<p><img caption="false" height="313" src="/images/local python wsgi.py_1.png" width="600"/></p>
-<p><img alt="" height="338" src="/images/local python wsgi.py_2.png" width="600"/></p>
-<p><span style="color: #0000ff;"><strong>ssh vs https (y:\home\.ssh\config)</strong></span></p>
-<p><span style="color: #0000ff;"><strong>(在可攜式系統的視窗內<span>以 sh 執行 Git 的 shell, </span>可透過指令<span style="color: #ff0000;">ssh-keygen -t rsa -b 4096 -C "This is my key"</span><span>建立位於 y:\home\.ssh\id_rsa 的 Private Key 與位於 y:\home\.ssh\id_rsa.pub 的 Public Key，將 id_rsa.pub 的內容, 轉貼到 Github 帳號 settings 中 SSH and GPG keys 項目內的 SSH Public Key 區-使用ssh 協定執行 git clone，ex:<span style="color: #ff0000;">git clone git@github.com:50733141/test_41_2.git<span style="color: #0000ff;">，即可使用ssh協定進行連線)</span></span></span></strong></span></p>
-<p><span style="color: #0000ff;"><strong><span><span style="color: #ff0000;"><span style="color: #0000ff;">(</span></span></span>利用ssh協定連線後，之後改版<span>配合 ungit 使用時, 可以直接輸入提交訊息後, 以 commit &amp; push 將近端版本提交推送到遠端</span>)</strong></span></p>
-<p><img caption="false" height="289" src="/images/ssh vs https.png" width="800"/></p>
-<p><span style="color: #0000ff;"><strong>.git/config (url = <a href="mailto:git@github.com:50733141/test_41_2.git)">git@github.com:50733141/test_41_2.git)</a></strong></span></p>
-<p><span style="color: #0000ff;"><strong>(在url選項後面顯示的項目，可設定要利用http或是ssh連線)</strong></span></p>
-<p><img alt="" height="212" src="/images/.git_config.png" width="900"/></p>
-<h1>介紹</h1>
-<p>分支網頁將會介紹本網頁所使用相關結構、程式碼、編輯.......等相關資訊</p>
-<h2>目錄結構</h2>
+</script><h1>簡介</h1>
+<h2>已知錯誤</h2>
+<h4>全部頁面會因無法正確解讀而誤刪</h4>
+<p>在特定情況下, 系統會誤刪 config/content.htm 檔案, 目前在單頁或全部頁面編輯存檔之前, 或將上一版本的 content.htm 存入 content_back.htm, 若 content.htm 內容被程式誤刪, 可以利用備份檔案複製回原始內容後, 再進行後續處理.</p>
+<p><span style="color: #ff0000;">可利用指令git reset --hard HEAD將網頁回復到最新的版本。</span></p>
+<h4>頁面標題不支援特殊符號</h4>
+<p>各頁面標題目前不支援特殊符號, 例如: "/", "?" 等, 若已經發生程式無法解讀頁面的情況, 只能從編輯 config/content.htm 下手, 若系統位於遠端, 則後續必須要再設法提供一個額外的編輯 config/content.htm 檔案的網際連結功能.</p>
+<h4>Video 引用不支援內部引用</h4>
+<p>tinymce 中插入 video 的小視窗, 要移除引用的圖像與連結, 因為一般建議不要在內容中存入 .mp4 的影片資料, 而只接受引入影片 URL 連結.</p><h2>頁面資源介紹</h2>
+<p>分支網頁將會介紹本網頁所使用相關結構、程式碼、編輯.......等相關資訊</p><h3>目錄結構</h3>
 <p>CMSimfly 的動態系統採用 Python3 + Flask 建構, 並且利用 Beatifulsoup 解讀位於 contig 目錄中的 content.htm 超文件檔案.</p>
 <p>content.htm 檔案可以透過動態系統中的 generate_pages 功能, 將超文件轉為位於 content 目錄中的個別頁面檔案.</p>
 <p>動態系統與靜態系統則共用 downloads, images, static 等目錄, 其中 downloads 目錄存放在動態系統上傳的文件檔, 而 images 目錄則存放動態系統所上傳的影像檔案, 包括 jpg, png 與 gif 等格式圖檔.</p>
-<p>static 目錄則存放在動態與靜態系統所需要的 Javascript 或 Brython 程式檔.</p>
-<h2>頁面編輯</h2>
+<p>static 目錄則存放在動態與靜態系統所需要的 Javascript 或 Brython 程式檔.</p><h3>頁面編輯</h3>
 <p>CMSimfly 動態系統的網際編輯器採用 <a href="https://www.tiny.cloud/">TinyMCE4</a>, 可以放入一般超文件,  納入圖檔, 嵌入影片連結, 並且加入帶有行數的原始碼.</p>
 <p>透過 File Upload 功能, 可以一次上傳多個檔案,  存入 downloads 目錄中儲存, 之後各頁面可以引入對應連結.</p>
 <p>而圖檔的上傳與引用與一般檔案類似, 但上傳後存入 images 目錄中.</p>
-<h2>插入程式碼</h2>
+<h3>插入程式碼</h3>
 <p>CMSimfly 目前使用 Syntaxhighlighter 3.0.83:</p>
 <p> <a href="http://alexgorbatchev.com/SyntaxHighlighter/">http://alexgorbatchev.com/SyntaxHighlighter/</a> </p>
 <p>進行頁面中的程式碼高亮顯示.</p>
-<h3>Java 程式碼</h3>
+<h4>Java 程式碼</h4>
 <pre class="brush:java;auto-links:false;toolbar:false" contenteditable="false">import java.util.Scanner;
 
 public class Life {
@@ -2610,7 +2557,7 @@ public class Life {
 
 }</pre>
 <p></p>
-<h3>Python 程式碼</h3>
+<h4>Python 程式碼</h4>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def parse_content():
     """use bs4 and re module functions to parse content.htm"""
     #from pybean import Store, SQLiteWriter
@@ -2693,7 +2640,7 @@ public class Life {
 
 </pre>
 <p></p>
-<h3>C或C++程式碼</h3>
+<h4>C或C++程式碼</h4>
 <p>請注意, 目前 CMSimfly 標題內文無法解讀 "/" 符號, 因此若本頁面的標題為  "C/C++程式碼", 則無法進行分頁.</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">/* Runge Kutta for a set of first order differential equations */
  
@@ -2790,7 +2737,7 @@ double f(double x, double y[], int i){
   return x;
 }</pre>
 <p></p>
-<h3>Lua 程式碼</h3>
+<h4>Lua 程式碼</h4>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">-- 導入 js 模組
 js = require("js")
 -- 取得 window
@@ -2819,7 +2766,7 @@ end
 print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
     </pre>
 <p></p>
-<h3>Javascript 程式碼</h3>
+<h4>Javascript 程式碼</h4>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">STLViewer = function(stlpath, plotarea) {
 
 	var mycanvas = document.getElementById(plotarea);
@@ -2905,7 +2852,7 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
 }
 </pre>
 <p></p>
-<h3>Html 原始碼</h3>
+<h4>Html 原始碼</h4>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
    &lt;head&gt;
       &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
@@ -2949,22 +2896,70 @@ print("總共猜了 "..num.." 次, answer=guess="..answer.." - correct")
    &lt;/body&gt;
 &lt;/html&gt;
 COPY TO CLIPBOARD	</pre>
-<p></p>
-<h2>網際簡報</h2>
+<p></p><h3>網際簡報</h3>
 <p>CMSimfly 中採用 <a href="https://revealjs.com/#/">Reveal.js</a> 作為網際簡報, 其中的維護檔案位於 config/reveal.js, 而對應的簡報檔案則位於 reveal 目錄中.</p>
-<h2>網誌編輯</h2>
+<h3>網誌編輯</h3>
 <p>CMSimfly 彩用 <a href="https://blog.getpelican.com/">Pelican blog</a> 系統, 編輯檔案位於 config/pelican.leo, 對應的</p>
 <p> Markdown 原始檔案位於 markdown 目錄中, 而經 Pelican 轉換出的網誌超文件檔案則位於 blog 目錄中.</p>
 <p>其餘在網誌文章中所需要的 Javascript 或 Brython 程式檔案, 則與 CMSimfly 及 Reveal.js 共用, 位於 static 目錄下.</p>
-<p>上傳檔案與圖檔的引用則與 CMSimfly 架構相同.</p>
-<h1>已知錯誤</h1>
-<h4>全部頁面會因無法正確解讀而誤刪</h4>
-<p>在特定情況下, 系統會誤刪 config/content.htm 檔案, 目前在單頁或全部頁面編輯存檔之前, 或將上一版本的 content.htm 存入 content_back.htm, 若 content.htm 內容被程式誤刪, 可以利用備份檔案複製回原始內容後, 再進行後續處理.</p>
-<p><span style="color: #ff0000;">可利用指令git reset --hard HEAD將網頁回復到最新的版本。</span></p>
-<h4>頁面標題不支援特殊符號</h4>
-<p>各頁面標題目前不支援特殊符號, 例如: "/", "?" 等, 若已經發生程式無法解讀頁面的情況, 只能從編輯 config/content.htm 下手, 若系統位於遠端, 則後續必須要再設法提供一個額外的編輯 config/content.htm 檔案的網際連結功能.</p>
-<h4>Video 引用不支援內部引用</h4>
-<p>tinymce 中插入 video 的小視窗, 要移除引用的圖像與連結, 因為一般建議不要在內容中存入 .mp4 的影片資料, 而只接受引入影片 URL 連結.</p><h1>亂數產生系統</h1>
+<p>上傳檔案與圖檔的引用則與 CMSimfly 架構相同.</p><h2>網際內容管理</h2>
+<p><strong>2019 Spring 課程目標</strong></p>
+<p>網際內容管理</p>
+<p><span>讓學員得以利用全球資訊網發表與 (精密) 機械 (設計) 相關的內容, 並進行有效管理.</span><br/><br/><span>內容發表: Google Blogger, Github Pages</span><br/><br/><span>有效管理: 透過 API 程式整合兩者之間的內容, 包括 CMSimfly, Reveal 與 Pelican Blog 與 Blogger</span></p><h2>CMSimfly網頁簡介</h2>
+<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
+<p>本網頁進度內容(week4、week5......)及影片皆取自<a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a>網際內容管理網誌。將每周導師所教學之內容更新於此網頁。</p><h1>近端配置與管理(網管)</h1>
+<p><span style="color: #0000ff;"><strong>windows network setting(確認當下有連線到網際網路及設定正確)</strong></span></p>
+<p><img alt="" height="330" src="/images/explorer_vxOL017VGD.png" width="600"/></p>
+<p><strong><span style="color: #0000ff;">chrome proxy(開啟網頁後進入設定-開啟proxy設定-輸入伺服器位址及連接埠-進入進階設定將特定網址取消使用proxy)</span></strong></p>
+<p><img caption="false" height="454" src="/images/chrome proxy.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>firefox proxy(開啟網頁後點選上方工具-選項-進階-網路-設定-手動設定proxy-設定完成即可，每次登入時輸入帳號密碼)</strong></span></p>
+<p><img caption="false" height="209" src="/images/firefox proxy-1.jpg" width="400"/></p>
+<p><img alt="" height="255" src="/images/firefox proxy-2.jpg" width="400"/></p>
+<p><img alt="" height="407" src="/images/firefox proxy-3.jpg" width="400"/></p>
+<p><img alt="" height="185" src="/images/firefox proxy-4.jpg" width="400"/></p>
+<p><span style="color: #0000ff;"><strong>mde.tw(網頁搜尋:mde.tw即可登入課程網頁)</strong></span></p>
+<p><img caption="false" height="55" src="/images/mde.tw.png" width="400"/></p>
+<p><img caption="false" height="336" src="/images/mde.tw_2.png" width="700"/></p>
+<p><strong><span style="color: #0000ff;">github.com(網頁搜尋:github.com-輸入帳號密碼即可登入自己的github)</span></strong></p>
+<p><img caption="false" height="300" src="/images/login github add repo_1.png" width="239"/></p>
+<p><img alt="" height="394" src="/images/mC8T4fNKwn.png" width="700"/></p>
+<p></p>
+<p><strong><span style="color: #0000ff;">portable programming system(進入<a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a>後，右方即可看到<a href="https://drive.google.com/open?id=1_TQBw1PM7jxrmtsBjvLKbjJWfGs8Ug79">2019_cdb_w5.7z</a>及<a href="https://drive.google.com/file/d/12IOfTpupXL0czFM_ZeHt-6sxfXwZK6ai/view?usp=sharing">2019_cdb_w13.7z</a>，任一下載後解壓縮即可)</span></strong></p>
+<p><img alt="" height="227" src="/images/portable programming system.png" width="300"/></p>
+<p><img alt="" height="466" src="/images/portable programming system_2.png" width="500"/></p>
+<p><span style="color: #0000ff;"><strong>portablegit - remove helper = manager(開啟start-輸入<span>git config --edit --system，即可進入下方圖面的頁面-將 credential 項目中的 helper = manager 刪除後儲存{儲存指令:wq}即可</span>)</strong></span></p>
+<p><img alt="" height="483" src="/images/portablegit - remove helper = manager.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>login github add repository - README.md(進入github後-點選右方選項your repository-NEW-建立新的倉儲，倉儲姓名及設定好之後即可建立)</strong></span></p>
+<p><img alt="" height="567" src="/images/login github add repo_2.png" width="700"/></p>
+<p><img alt="" height="411" src="/images/login github add repo_4.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>git clone  self-repo and CMSimfly(輸入指令cd tmp-cd 倉儲名，進入倉儲資料夾之後-輸入 git clone <a href="mailto:git@github.com:帳號名/">git@github.com:帳號名/</a>倉儲名.git，即可clone自己的倉儲，另外需取得CMSimfly倉儲內容，所以也必須將<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly</a>的內容copy到自己倉儲)</strong></span></p>
+<p><img alt="" height="394" src="/images/git clone_1.png" width="700"/></p>
+<p><img alt="" height="131" src="/images/git clone_2.png" width="500"/></p>
+<p><img alt="" height="394" src="/images/cmsimfly 範例網站 git clone_3.png" width="700"/></p>
+<p><img alt="" height="665" src="/images/git clone_4.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>y:\home\.gitconfig(輸入指令git config --global user.name""、git config --global user.email""、git config --global http.proxy)</strong></span></p>
+<p><img alt="" height="155" src="/images/chrome_nMcNdQKBYB.png" width="700"/></p>
+<p><strong><span style="color: #0000ff;">git config --global user.name "scrum-4"</span></strong><br/><strong><span style="color: #0000ff;">git config --global user.email "scrum4@mde.tw"</span></strong></p>
+<p><img alt="" height="54" src="/images/git config name and email.png" width="300"/><br/><span style="color: #0000ff;"><strong>git config --global http.proxy http://伺服器網址+連接埠號</strong></span></p>
+<p><img alt="" height="38" src="/images/git config --global http.proxy.png" width="300"/></p>
+<p><span style="color: #0000ff;"><strong>git add .、git commit -m ""、git push(這是每次改版後必須輸入的指令，將改版內容commit及push到倉儲更新)</strong></span></p>
+<p><span style="color: #0000ff;"><strong>git add .(拍快照)</strong></span></p>
+<p><span style="color: #0000ff;"><strong>git commit -m "當次改版標題"(提交改版)</strong></span></p>
+<p><span style="color: #0000ff;"><strong>git push(上傳推到網站)</strong></span></p>
+<p><img alt="" height="365" src="/images/SciTE_HfnCjG7TVt.png" width="700"/></p>
+<p><span style="color: #0000ff;"><strong>Github Pages - setting, url(進入倉儲內的setting-下滑到Github Pages-將Source第一個選項改為master branch即可)</strong></span></p>
+<p><img caption="false" height="429" src="/images/Github Pages - setting, url_1.png" width="500"/></p>
+<p><span style="color: #0000ff;"><strong>local python wsgi.py(開啟動態網頁-步驟:cd tmp-cd 倉儲名-python wsgi.py-複製網址並貼上即可進入動態網頁)</strong></span></p>
+<p><img caption="false" height="313" src="/images/local python wsgi.py_1.png" width="600"/></p>
+<p><img alt="" height="338" src="/images/local python wsgi.py_2.png" width="600"/></p>
+<p><span style="color: #0000ff;"><strong>ssh vs https (y:\home\.ssh\config)</strong></span></p>
+<p><span style="color: #0000ff;"><strong>(在可攜式系統的視窗內<span>以 sh 執行 Git 的 shell, </span>可透過指令<span style="color: #ff0000;">ssh-keygen -t rsa -b 4096 -C "This is my key"</span><span>建立位於 y:\home\.ssh\id_rsa 的 Private Key 與位於 y:\home\.ssh\id_rsa.pub 的 Public Key，將 id_rsa.pub 的內容, 轉貼到 Github 帳號 settings 中 SSH and GPG keys 項目內的 SSH Public Key 區-使用ssh 協定執行 git clone，ex:<span style="color: #ff0000;">git clone git@github.com:50733141/test_41_2.git<span style="color: #0000ff;">，即可使用ssh協定進行連線)</span></span></span></strong></span></p>
+<p><span style="color: #0000ff;"><strong><span><span style="color: #ff0000;"><span style="color: #0000ff;">(</span></span></span>利用ssh協定連線後，之後改版<span>配合 ungit 使用時, 可以直接輸入提交訊息後, 以 commit &amp; push 將近端版本提交推送到遠端</span>)</strong></span></p>
+<p><img caption="false" height="289" src="/images/ssh vs https.png" width="800"/></p>
+<p><span style="color: #0000ff;"><strong>.git/config (url = <a href="mailto:git@github.com:50733141/test_41_2.git)">git@github.com:50733141/test_41_2.git)</a></strong></span></p>
+<p><span style="color: #0000ff;"><strong>(在url選項後面顯示的項目，可設定要利用http或是ssh連線)</strong></span></p>
+<p><img alt="" height="212" src="/images/.git_config.png" width="900"/></p>
+<h1>亂數產生系統</h1>
 <p><button onclick="myFunction()">按一下</button></p>
 <p id="demo"></p>
 <script>
@@ -3470,7 +3465,32 @@ Host github.com_user2
 <p>在檔案-站台管理員-新增站台-利用ifconfig查詢虛擬主機的ip位置後將ip新增到主機空格內，並且輸入虛擬主機使用者名稱及密碼，點選連線後即完成。</p>
 <p><img alt="" height="488" src="/images/filezilla_IYGkogLrBZ.png" width="600"/></p><h2>校園授權軟體</h2>
 <p><a class="ac-algo fz-l lh-20 tc d-ib va-mid" data-cc6="5ced4fc3c4b7c" href="https://r.search.yahoo.com/_ylt=AwrtFnbDT.1ccHwAVxBr1gt.;_ylu=X3oDMTEyY2s5cmpuBGNvbG8DdHcxBHBvcwMxBHZ0aWQDQjU1MTlfMQRzZWMDc3I-/RV=2/RE=1559085123/RO=10/RU=https%3a%2f%2fnfucc.nfu.edu.tw%2fzh%2fdownload%2fdownload-service%2f2015-09-22-01-16-07-2/RK=2/RS=87T8soBHUV0nGOhXmbqn_HXZudI-" id="yui_3_10_0_1_1559056324685_210" referrerpolicy="origin" saprocessedanchor="true" target="_blank">校園授權軟體下載專區(限校內IP)</a>，進入網站後登入校務帳號密碼，即可下載免費正版軟體。</p>
-<p><img alt="" height="324" src="/images/校園授權網站.png" width="600"/></p><h2>VirtualBox</h2><h2>TWAREN SSL-VPN連線教學</h2>
+<p><img alt="" height="324" src="/images/校園授權網站.png" width="600"/></p><h2>VirtualBox</h2>
+<p>將virtualbox下載下來後開啟，並提前將ubuntu server下載好</p>
+<p>ubuntu下載網址:<a href="https://www.ubuntu.com/download/server">https://www.ubuntu.com/download/server</a></p>
+<p><img alt="" height="108" src="/images/virtualbox.png" width="70"/></p>
+<p><strong><span style="color: #ff0000;">虛擬主機系統建立</span></strong></p>
+<p><img alt="" height="375" src="/images/下載ubuntu.png" width="600"/></p>
+<p>將virtualbox開啟之後先進入設定更改網路連接方式，<span style="color: #ff0000;">以網路卡橋接進行連線</span>(下圖連接網路名稱為學校網路)</p>
+<p><img alt="" height="448" src="/images/虛擬主機連接方式設定.png" width="600"/></p>
+<p>返回首頁並點選新增按鈕新增虛擬主機系統，類型選擇Linux，版本是Ubuntu。並完成其他設定。</p>
+<p><img caption="false" height="288" src="/images/VirtualBox01.png" width="500"/></p>
+<p><img alt="" height="303" src="/images/VirtualBox02.png" width="300"/><img alt="" height="303" src="/images/VirtualBox03.png" width="300"/><img alt="" height="303" src="/images/VirtualBox04.png" width="300"/><img alt="" height="311" src="/images/VirtualBox05.png" width="300"/><img alt="" height="311" src="/images/VirtualBox06.png" width="300"/><img alt="" height="311" src="/images/VirtualBox07.png" width="300"/></p>
+<p><strong><span style="color: #ff0000;">開啟虛擬主機完成設定</span></strong></p>
+<p><strong><span style="color: #ff0000;">可利用tab或是方向鍵下來控制項目，enter鍵來決定項目。</span></strong></p>
+<p><span style="color: #000000;"><strong>依照上方指示完成後，只剩下虛擬主機系統內的設定。開啟新建立的系統並進行以下設定。</strong></span></p>
+<p><span style="color: #000000;"><strong><img caption="false" height="419" src="/images/ubuntu安裝1.png" width="500"/><img alt="" height="417" src="/images/ubuntu安裝2.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝3.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝4.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>以下輸入的proxy網址為當時在學校內所連到的主機伺服器位址。<img alt="" height="420" src="/images/ubuntu安裝5.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝6.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝7-1.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝7-1 (2).png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝7-2.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝7-3.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝7-5.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>這裡輸入的資訊為之後設定完成將虛擬主機開啟後須進行登入的帳號密碼。<img alt="" height="420" src="/images/ubuntu安裝7-6.png" width="500"/><img alt="" height="420" src="/images/ubuntu安裝7.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>設定完成後等待安裝成功即完成。<img alt="" height="420" src="/images/ubuntu安裝last.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>啟動虛擬主機並且登入後</strong></span></p>
+<p><span style="color: #000000;"><strong>1.利用指令<span><span style="color: #ff0000;">sudo apt install nginx</span> 安裝 nginx WWW 伺服器</span></strong></span></p>
+<p><span style="color: #000000;"><strong><span><img alt="" height="420" src="/images/以指令安裝nginx.png" width="500"/></span></strong></span></p>
+<p><strong><span style="color: #000000;">2. 利用<span style="color: #ff0000;">ifconfig</span>指令查詢 Ubuntu 伺服器的 IP,在網頁裡輸入網址，測試 nginx 伺服器是否可以連線</span></strong></p>
+<p><strong><span style="color: #000000;"><img alt="" height="420" src="/images/ifconfig.png" width="500"/></span></strong></p>
+<p><strong><span style="color: #000000;"><img alt="" height="361" src="/images/vituralbox開啟網頁.png" width="600"/><br/></span></strong></p>
+<p><strong><span style="color: #000000;">3.<span> 開啟安裝好的filezilla client ，將編輯好的 nginx 設定檔案送到 Ubuntu</span></span></strong></p>
+<p><strong><span style="color: #000000;"><span><img alt="" height="477" src="/images/傳送三個檔案.png" width="600"/></span></span></strong></p><h2>TWAREN SSL-VPN連線教學</h2>
 <p>選取與自己系統相容的檔案並下載。</p>
 <p><img alt="" height="282" src="/images/chrome_BU6QoDjgsm.png" width="600"/></p>
 <p>下載下來後執行並安裝</p>
@@ -3517,7 +3537,7 @@ Host github.com_user2
 <div><span>如何得知連線的 IP 究竟是什麼呢？您可透過網際網路上提供 IP 位址偵測服務的網站進行確認，例如 <a href="http://showip.net/" target="_blank" title="Show IP"><span>http://showip.net/</span></a></span></div>
 <div><span><img alt="15313.png" caption="false" src="https://nfucc.nfu.edu.tw/images/15313.png" width="600"/></span></div>
 </blockquote><h1>w5、w13檔案比較</h1>
-<p>5/24</p>
-<p>test_1:測試將w13資料夾下載下來後，利用w13進行改版，是否會影響到w5內容。(此段內容使用w13資料夾開啟)</p>
-<p>test_2:測試結果，利用w13資料夾同樣可進行改版，確定push之後，將w13關閉並開啟w5資料夾，進入動態系統後內容停留在w13進行改版後的前一個版本(內容與w13不同步)，解決方式:利用指令git pull將遠端最新版本下載到自己的本機端(w5資料夾)，pull完畢後再重新開啟動態網頁即可。</p>
+<p><strong><span style="color: #000000;">5/24</span></strong></p>
+<p><strong><span style="color: #000000;">test_1:測試利用w13進行改版，是否會影響到w5內容。</span></strong></p>
+<p><strong><span style="color: #000000;">test_2:測試結果:利用w13資料夾同樣可進行改版，確定push之後，將w13關閉並開啟w5資料夾，進入動態系統後內容停留在w13進行改版後的前一個版本(內容與w13不同步)，可利用指令git pull將遠端最新版本下載到自己的本機端(w5資料夾)，pull完畢後再重新開啟動態網頁即可。</span></strong></p>
 <p></p><h1>期末報告</h1>
