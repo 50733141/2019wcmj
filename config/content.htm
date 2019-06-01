@@ -3348,8 +3348,15 @@ ctx.restore();
 <h1>PUSH及KEY設定</h1>
 <p><strong><span style="color: #ff0000;">關閉操作系統儲存 Github 帳號密碼設定</span></strong><br/><br/><span>目前 KMOL 所使用的 PortableGIT, 內建設定的 credential helper 為 manger, 表示當使用者使用 git push 時內建會跳出讓使用者輸入帳號密碼的對話視窗, 以讓使用者輸入帳號密碼</span><br/><br/><span>我們可使用:</span><span><strong><span style="color: #ff0000;">git config --edit --system</span></strong>指令</span><br/><br/><span>帶出 vi 編輯器, 編輯 git 指令所使用的系統設定, 只要將 credential 項目中的 helper = manager 刪除後儲存, 即可關閉內定將使用者 Github 帳號密碼儲存於操作系統的問題.</span></p>
 <p><span>示範影片如下:</span></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/kW0FOIxfbbI" width="900"></iframe></p>
+<p><span></span></p>
 <p><strong><span style="color: #ff0000;">建立OPENSSH格式的KEY及設定</span></strong></p>
 <p><span>在可攜系統的命令列視窗中, 以 sh 執行 Git 的 shell, 使用<br/><br/><br/><span>ssh-keygen -t rsa -b 4096 -C "This is my key"</span><br/><br/><span>建立位於 y:\home\.ssh\id_rsa 的 Private Key 與位於 y:\home\.ssh\id_rsa.pub 的 Public Key, 並且將 id_rsa.pub 的內容, 轉貼到 Github 帳號 settings 中 SSH and GPG keys 項目內的 SSH Public Key 區.</span></span></p>
+<p>key成功建立以及設定之後，回到自己的github網站並在clone or download裡選擇USE SSH，複製後再可攜式系統裡進行git clone，待畫面顯示done即完成，之後將倉儲資料夾裡.ssh中的config檔案開啟，並將url選項改成ssh，即完成。</p>
+<p><img alt="" height="338" src="/images/github.com.png" width="600"/></p>
+<p><img alt="" height="301" src="/images/chrome_SnDiNOCcXF.png" width="500"/></p>
+<p><img alt="" height="313" src="/images/cmd_MVIAlqZvW8.png" width="600"/></p>
+<p><img alt="" height="218" src="/images/SciTE_kdp8rX7ZSc.png" width="600"/></p>
 <p><span><span>ssh 連線透過 proxy server, 必須設定 y:\home\.ssh\config 如下:</span></span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.kmol.info:3128 %h %p
   
@@ -3375,37 +3382,8 @@ Host github.com_user2
   
     TCPKeepAlive yes
     IdentitiesOnly yes</pre>
-<p>示範影片如下:<br/><br/></p><h2>week_4</h2>
-<p><span>說明如何利用 </span><a href="https://pages.github.com/">Github Pages</a><span><span> </span>與<span> </span></span><a href="https://github.com/chiamingyen/cmsimfly">CMSimfly</a><span>, 建立個人的靜態網際內容管理系統.</span></p>
-<p><span>進度內容及影片取自</span><a href="https://2019wcm.blogspot.com/">https://2019wcm.blogspot.com/</a><span>網際內容管理網誌。</span><br/><span>Demo 網站:<span> </span></span><a href="https://mdecourse.github.io/2019wcmj">https://mdecourse.github.io/2019wcmj</a><br/><br/><span>此處所謂的靜態網際內容管理指<span> </span></span><a href="https://pages.github.com/">Github Pages</a><span><span> </span>目前只允許伺服倉儲中特定分支的特定目錄中的超文件, 亦即<span> </span></span><a href="https://en.wikipedia.org/wiki/HTML">Html</a><span><span> </span>檔案與<span> </span></span><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a><span><span> </span>程式檔案, 而 CMSimfly 的靜態網頁就是利用 Python 程式, 設法將原本的動態網站系統的內容轉為超文件與 Javascript 後, 單獨儲存在 content 目錄下, 然後透過倉儲根目錄中的 index.html 進行跳轉至 content/index.html, 但是 CMSimfly 倉儲中仍然保留所有動態系統的 Python 程式與設定, 可上傳至其他支援執行 Python 的網際應用伺服器 (例如:<span> </span></span><a href="https://www.heroku.com/">Heroku</a><span>), 並以動態的網站格式型態, 讓管理者登入進行內容管理.</span><br/><br/><span>之後, 我們將以 Github 倉儲中的資料版本為主, 設法在各用戶的近端可攜環境中進行版本管理, 然後再同步到<span> </span></span><a href="https://www.heroku.com/">Heroku</a><span><span> </span>動態網站, 或其他自架的網站。</span></p><h3>使用 SSH 執行 Git clone 與 push</h3>
-<p><span><span>在 Windows 10 環境下使用可攜系統的優點是使用者可以隨身攜帶程式開發環境外, 還能將工作中的倉儲與認證用資料隨身, 以便在任何時間進行近端或遠端資料維護.</span><br/><br/><span>以下操作因僅用於課程教學使用, 所建立的認證用 Private Key 並未使用密碼保護, 其他非教學情境下, 建議一定要多加一組密碼保護認證用 Private Key, 一旦隨身碟遺失後, 無需擔心重要資料被竄改.</span><br/><br/><span>未採用密碼保護的 Private Key, 若隨身碟遺失, 則需即刻重新設定 Github 帳號中所使用的 SSH Public Key.</span><br/><br/><span>關閉操作系統儲存 Github 帳號密碼設定</span><br/><br/><span>目前 KMOL 所使用的 PortableGIT, 內建設定的 credential helper 為 manger, 表示當使用者使用 git push 時內建會跳出讓使用者輸入帳號密碼的對話視窗, 一旦使用者輸入帳號密碼後, 該資料將會儲存於操作系統中, 即便使用者選擇取消, 以手動輸入帳號密碼, 操作系統的 credential manager 依然會保存此一私密資料.</span><br/><br/><span>使用</span><br/><br/><br/><span>git config --edit --system</span><br/><br/><br/><span>可以帶出 vi 編輯器, 編輯 git 指令所使用的系統設定, 只要將 credential 項目中的 helper = manager 刪除後儲存, 即可關閉內定將使用者 Github 帳號密碼儲存於操作系統的問題.</span></span></p><h3>建立 OpenSSH 格式的 Private 與 Public Keys</h3>
-<p><span><span>接下來, 在可攜系統的命令列視窗中, 以 sh 執行 Git 的 shell, 使用</span><br/><br/><br/><span>ssh-keygen -t rsa -b 4096 -C "This is my key"</span><br/><br/><span>建立位於 y:\home\.ssh\id_rsa 的 Private Key 與位於 y:\home\.ssh\id_rsa.pub 的 Public Key, 並且將 id_rsa.pub 的內容, 轉貼到 Github 帳號 settings 中 SSH and GPG keys 項目內的 SSH Public Key 區.</span><br/><br/><br/><span>使用 ssh 協定執行 git clone</span><br/><br/><br/><span>為了採用 OpenSSH 協定執行登入認證, 使用者在近端 git clone 倉儲時, 必須使用類似 git@github.com:帳號/倉儲.git 的連線 URL</span><br/><br/><br/><span>例如:<span> </span></span><br/><br/><br/><span>要將<span> </span></span><a href="https://github.com/mdecourse/wcm2019">https://github.com/mdecourse/wcm2019</a><span><span> </span>的倉儲, 以 ssh 協定 git clone 到近端時, 必須使用:</span><br/><br/><br/><span>git clone git@github.com:mdecourse/wcm2019.git</span><br/><br/><br/><span>建立位於 wcm2019 的倉儲目錄, 而 git add ., git commit -m 與 git push 的指令則與採 http 連線時的指令相同. 只是採用 ssh 連線下的 git push, git 會讀取位於 y:\home\.ssh\id_rsa Private Key 與 Github 帳號上所設定的 Public Key 進行比對, 若同為一個 pair, 則通過認證, 可將改版的資料推送到遠端倉儲中.</span><br/><br/><br/><span>上述 ssh 協定下的 git clone 與 git push, 配合 ungit 使用時, 可以直接輸入提交訊息後, 以 commit &amp; push 將近端版本提交推送到遠端.</span><br/><br/><br/><span>ssh 連線透過 proxy server, 必須設定 y:\home\.ssh\config 如下:</span><br/></span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.kmol.info:3128 %h %p
- 
-# for user1
-# url = git@github.com_user1:user1/cmstest.git
-Host github.com_user1
-    User git
-    Port 22
-    Hostname github.com
- 
-    IdentityFile "y:\home\.ssh\id_rsa_user1"
- 
-    TCPKeepAlive yes
-    IdentitiesOnly yes
-     
-# for user2
-# url = git@github.com_user2:user2/user2.com.git
-Host github.com_user2
-    Port 22
-    Hostname github.com
- 
-    IdentityFile "y:\home\.ssh\id_rsa_user2"
- 
-    TCPKeepAlive yes
-    IdentitiesOnly yes
-    </pre>
-<p></p><h1>week_8</h1>
+<p>示範影片如下:<br/><br/></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/KHRf3T2gJsM" width="943"></iframe></p><h1>week_8</h1>
 <p><strong>電腦初學者的網際內容管理</strong></p>
 <p><em><strong><span style="color: #ff0000;">week9網管期中影片部分即在講解下列步驟，對於下面步驟不理解可轉移至week9的內容觀看。</span></strong></em></p>
 <div class="post-header">
@@ -3456,13 +3434,12 @@ Host github.com_user2
 <h1>week_13</h1>
 <p>本周內容:和同學們清楚說明w1-w13從創立github帳號、github Pages、網路設定、相關指令應用......等內容。相關內容將於本網頁的<span style="color: #ff0000;"><strong>近端配置與管理(網管)</strong></span>頁面與大家介紹，感謝。</p>
 <h1>week_14</h1>
-<p>本周內容:將<a href="http://mde.tw/wcm2019/content/ROC%20flag.html">http://mde.tw/wcm2019/content/ROC%20flag.html</a>的國旗標誌加入自己的網頁<strong><span style="color: #ff0000;">(已新增在第一分頁:國旗)</span></strong></p>
+<p>本周內容:將<a href="http://mde.tw/wcm2019/content/ROC%20flag.html">http://mde.tw/wcm2019/content/ROC%20flag.html</a>的國旗標誌加入自己的網頁<strong><span style="color: #ff0000;">(已新增在第一分頁:ROC Flag)</span></strong></p>
 <p><strong><span style="color: #ff0000;">注意事項:</span></strong></p>
 <p><strong><span style="color: #ff0000;">5/21:因一開始更改flaskapp.py裡的內容更改完後會出現錯誤，所以必須將下列程式碼完整複製到flaskapp.py檔案並蓋過。</span></strong></p>
 <p><strong><span style="color: #ff0000;">5/22:發現push之後網頁顯示會跟原來不一樣，因此先改回了第一次修改的flaskapp.py檔案。</span></strong></p>
 <p><strong><span style="color: #ff0000;">5/24:詳細內容及第一次修改的flaskapp.py檔案程式碼放置在<span style="color: #0000ff;">國旗</span>分頁。</span></strong></p>
-<p></p>
-<h1>week_15</h1>
+<p></p><h1>week_15</h1>
 <p>本周內容:</p>
 <p>1.<span>TWAREN SSL-VPN連線安裝教學</span></p>
 <p><span>2.VirtualBox設定教學</span></p>
