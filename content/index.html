@@ -1,13 +1,56 @@
-<!doctype html>
-<html><head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>CMSimfly</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
-<script src="tipuesearch_content.js"></script>
-<script src="./../static/jquery.js"></script>
-<link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
-<script src="./../static/tipuesearch/tipuesearch_set.js"></script>
-<script src="./../static/tipuesearch/tipuesearch.min.js"></script>
-
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSimfly</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css">
+        <script src="./../static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+        <script src="./../static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
 <script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
 <script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
@@ -55,30 +98,56 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
 
-<script type="text/javascript">
-/*shorthand of $(document).ready(function(){};); */
-$(function(){
-    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
-    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
-});
-function doSearch() {
-     $('#tipue_search_input').tipuesearch({
-        newWindow: true, minimumLength: 2
-     });
-}
-$(document).ready(doSearch);
-</script>
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
 
-</head><header><h1>50733141-網際內容管理</h1> <confmenu>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="sitemap.html">Site Map</a></li>
-<li><a href="./../reveal/index.html">reveal</a></li>
-<li><a href="./../blog/index.html">blog</a></li>
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>50733141-網際內容管理</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">50733141-網際內容管理</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='ROC flag.html'>ROC flag</a><li class='has-children'><a href='簡介.html'>簡介</a><ul class='dropdown'><li><a href='已知錯誤.html'>已知錯誤</a><li class='has-children'><a href='頁面資源介紹.html'>頁面資源介紹</a><ul class='dropdown'><li><a href='目錄結構.html'>目錄結構</a><li><a href='頁面編輯.html'>頁面編輯</a><li><a href='插入程式碼.html'>插入程式碼</a><li><a href='網際簡報.html'>網際簡報</a><li><a href='網誌編輯.html'>網誌編輯</a></li></ul><li><a href='網際內容管理.html'>網際內容管理</a><li><a href='CMSimfly網頁簡介.html'>CMSimfly網頁簡介</a></li></ul><li><a href='近端配置與管理(網管).html'>近端配置與管理(網管)</a><li><a href='亂數產生系統.html'>亂數產生系統</a><li><a href='game-擲骰子.html'>game-擲骰子</a><li><a href='繪圖.html'>繪圖</a><li><a href='PUSH及KEY設定.html'>PUSH及KEY設定</a><li><a href='week_8.html'>week_8</a><li><a href='week_9網管期中影片.html'>week_9網管期中影片</a><li class='has-children'><a href='week_10.html'>week_10</a><ul class='dropdown'><li><a href='Virtualbox 虛擬主機的網路設定.html'>Virtualbox 虛擬主機的網路設定</a></li></ul><li class='has-children'><a href='week_12.html'>week_12</a><ul class='dropdown'><li><a href='網管課程任務.html'>網管課程任務</a><li><a href='網際內容管理課程回顧.html'>網際內容管理課程回顧</a></li></ul><li><a href='week_13.html'>week_13</a><li><a href='week_14.html'>week_14</a><li class='has-children'><a href='week_15.html'>week_15</a><ul class='dropdown'><li><a href='filezilla.html'>filezilla</a><li><a href='校園授權軟體.html'>校園授權軟體</a><li><a href='VirtualBox.html'>VirtualBox</a><li><a href='TWAREN SSL-VPN連線教學.html'>TWAREN SSL-VPN連線教學</a></li></ul><li class='has-children'><a href='week_16.html'>week_16</a><ul class='dropdown'><li><a href='利用虛擬主機開啟動態網站.html'>利用虛擬主機開啟動態網站</a></li></ul><li><a href='2019_cdb_w5.w13.html'>2019_cdb_w5.w13</a><li><a href='期末報告.html'>期末報告</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
 
-</ul>
-</confmenu></header>
-<div class='container'><nav><ul id='css3menu1' class='topmenu'><div class="tipue_search_group"><input style="width: 6vw;" type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="Press enter key to search" required></div><li><a href='ROC flag.html'>ROC flag</a><li><a href='簡介.html'>簡介</a><ul><li><a href='已知錯誤.html'>已知錯誤</a><li><a href='頁面資源介紹.html'>頁面資源介紹</a><ul><li><a href='目錄結構.html'>目錄結構</a><li><a href='頁面編輯.html'>頁面編輯</a><li><a href='插入程式碼.html'>插入程式碼</a><li><a href='網際簡報.html'>網際簡報</a><li><a href='網誌編輯.html'>網誌編輯</a></li></ul><li><a href='網際內容管理.html'>網際內容管理</a><li><a href='CMSimfly網頁簡介.html'>CMSimfly網頁簡介</a></li></ul><li><a href='近端配置與管理(網管).html'>近端配置與管理(網管)</a><li><a href='亂數產生系統.html'>亂數產生系統</a><li><a href='game-擲骰子.html'>game-擲骰子</a><li><a href='繪圖.html'>繪圖</a><li><a href='PUSH及KEY設定.html'>PUSH及KEY設定</a><li><a href='week_8.html'>week_8</a><li><a href='week_9網管期中影片.html'>week_9網管期中影片</a><li><a href='week_10.html'>week_10</a><ul><li><a href='Virtualbox 虛擬主機的網路設定.html'>Virtualbox 虛擬主機的網路設定</a></li></ul><li><a href='week_12.html'>week_12</a><ul><li><a href='網管課程任務.html'>網管課程任務</a><li><a href='網際內容管理課程回顧.html'>網際內容管理課程回顧</a></li></ul><li><a href='week_13.html'>week_13</a><li><a href='week_14.html'>week_14</a><li><a href='week_15.html'>week_15</a><ul><li><a href='filezilla.html'>filezilla</a><li><a href='校園授權軟體.html'>校園授權軟體</a><li><a href='VirtualBox.html'>VirtualBox</a><li><a href='TWAREN SSL-VPN連線教學.html'>TWAREN SSL-VPN連線教學</a></li></ul><li><a href='week_16.html'>week_16</a><ul><li><a href='利用虛擬主機開啟動態網站.html'>利用虛擬主機開啟動態網站</a></li></ul><li><a href='2019_cdb_w5.w13.html'>2019_cdb_w5.w13</a><li><a href='期末報告.html'>期末報告</a></li></ul></nav><section><div id="tipue_search_content"> <a href='簡介.html'>Next</a> >> 簡介<br /><h1>ROC flag</h1>
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content"> <a href='簡介.html'>Next</a> >> 簡介<br /><h1>ROC flag</h1>
 <p><strong><span style="color: #ff0000;"><span style="color: #800080;">注意事項</span>:需將w5 or w13資料夾裡自己倉儲的flaskapp.py檔案進行修改，國旗才可顯示出來。</span></strong></p>
 <p><span style="color: #ff0000;"><strong><span style="color: #800080;">修改後錯誤</span>:修改後利用Edit All進行編輯，編輯完成並典籍save按鈕時，會顯示錯誤。解決方式:將<span style="color: #0000ff;">week_14<span style="color: #ff0000;">分支裡下方的程式碼全部複製並蓋過自己的flaskapp.py檔案。</span></span></strong></span></p>
 <p><strong><span style="color: #800080;">二次修改後錯誤:</span></strong><strong><span style="color: #800080;"><span style="color: #ff0000;">將flaskapp.py檔案更改之後，可進行Edit All編輯並save，國旗也可顯示，但在進行改版之後，靜態網頁會排版方式會顯示錯誤。解決方法:繼續使用第一次修改的flaskapp.py檔案，並等待錯誤修復。<span style="color: #ff00ff;">第一次修改的flaskapp.py檔案程式碼會放在本頁最下方。</span></span></span></strong></p>
@@ -336,8 +405,8 @@ _curdir = os.path.join(os.getcwd(), os.path.dirname(__file__))
 # 表示程式在近端執行, 最後必須決定是由 init.py 或此地決定目錄設定
 config_dir = _curdir + "/config/"
 static_dir = _curdir + "/static"
-download_dir = _curdir + "./../downloads/"
-image_dir = _curdir + "./../images/"
+download_dir = _curdir + "/downloads/"
+image_dir = _curdir + "/images/"
 
 # 利用 init.py 啟動, 建立所需的相關檔案
 initobj = init.Init()
@@ -609,33 +678,33 @@ def downloadlist_access_list(files, starti, endi):
         # images files
         if fileExtension == ".png" or fileExtension == ".jpg" or fileExtension == ".gif":
             outstring += '&lt;input type="checkbox" name="filename" value="' + \
-                              files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'./../images/'+ \
+                              files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/images/'+ \
                               files[index] + '\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + \
                               files[index] + '&lt;/a&gt; (' + str(fileSize) + ')&lt;br /&gt;'
         # stl files
         elif fileExtension == ".stl":
             outstring += '&lt;input type="checkbox" name="filename" value="' + \
-                              files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/static/viewstl.html?src=./../downloads/' + \
+                              files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/static/viewstl.html?src=/downloads/' + \
                               files[index] + '\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + \
                               files[index] + '&lt;/a&gt; (' + str(fileSize) + ')&lt;br /&gt;'
         # flv files
         elif fileExtension == ".flv":
             outstring += '&lt;input type="checkbox" name="filename" value="' + \
-                              files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/flvplayer?filepath=./../downloads/' + \
+                              files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/flvplayer?filepath=/downloads/' + \
             files[index] + '\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + files[index] + '&lt;/a&gt; (' + str(fileSize) + ')&lt;br /&gt;'
         # direct download files
         else:
             outstring += "&lt;input type='checkbox' name='filename' value='" + files[index] + \
-                              "'&gt;&lt;a href='./../downloads/" + files[index] + "'&gt;" + files[index] + \
+                              "'&gt;&lt;a href='/downloads/" + files[index] + "'&gt;" + files[index] + \
                               "&lt;/a&gt; (" + str(fileSize) + ")&lt;br /&gt;"
     return outstring
 
 
 # downloads 方法主要將位於 downloads 目錄下的檔案送回瀏覽器
-@app.route('./../downloads/&lt;path:path&gt;')
+@app.route('/downloads/&lt;path:path&gt;')
 def downloads(path):
     """Send files in downloads directory."""
-    return send_from_directory(_curdir+"./../downloads/", path)
+    return send_from_directory(_curdir+"/downloads/", path)
 
 
 # 與 file_selector 搭配的取檔程式
@@ -646,7 +715,7 @@ def downloadselect_access_list(files, starti, endi):
         fileName, fileExtension = os.path.splitext(files[index])
         fileSize = os.path.getsize(download_dir + "/" + files[index])
         outstring += '''&lt;input type="checkbox" name="filename" value="''' + \
-                          files[index] + '''"&gt;&lt;a href="#" onclick='window.setLink("./../downloads/''' + \
+                          files[index] + '''"&gt;&lt;a href="#" onclick='window.setLink("/downloads/''' + \
                           files[index] + '''",0); return false;'&gt;''' + files[index] + \
                           '''&lt;/a&gt; (''' + str(sizeof_fmt(fileSize)) + ''')&lt;br /&gt;'''
     return outstring
@@ -935,9 +1004,9 @@ def fileaxupload():
         filename = request.args.get("ax-file-name")
         flag = request.args.get("start")
         if flag == "0":
-            file = open(_curdir + "./../downloads/" + filename, "wb")
+            file = open(_curdir + "/downloads/" + filename, "wb")
         else:
-            file = open(_curdir + "./../downloads/" + filename, "ab")
+            file = open(_curdir + "/downloads/" + filename, "ab")
         file.write(request.stream.read())
         file.close()
         return "files uploaded!"
@@ -1034,8 +1103,8 @@ def generate_pages():
 
     search_content = []
     for i in range(len(newhead)):
-        # 在此必須要將頁面中的 ./../images/ 字串換為 images/, ./../downloads/ 換為 downloads/
-        # 因為 Flask 中靠 ./../images/ 取檔案, 但是一般 html 則採相對目錄取檔案
+        # 在此必須要將頁面中的 /images/ 字串換為 images/, /downloads/ 換為 downloads/
+        # 因為 Flask 中靠 /images/ 取檔案, 但是一般 html 則採相對目錄取檔案
         # 此一字串置換在 get_page2 中進行
         # 加入 tipue search 模式
         get_page_content = []
@@ -1131,9 +1200,9 @@ def get_page(heading, edit):
 #def get_page2(heading, head, edit):
 def get_page2(heading, head, edit, get_page_content = None):
     not_used_head, level, page = parse_content()
-    # 直接在此將 ./../images/ 換為 ./.../../images/, ./../downloads/ 換為 ./.../../downloads/, 以 content 為基準的相對目錄設定
-    page = [w.replace('./../images/', './.../../images/') for w in page]
-    page = [w.replace('./../downloads/', './.../../downloads/') for w in page]
+    # 直接在此將 /images/ 換為 ./../images/, /downloads/ 換為 ./../downloads/, 以 content 為基準的相對目錄設定
+    page = [w.replace('/images/', './../images/') for w in page]
+    page = [w.replace('/downloads/', './../downloads/') for w in page]
     # 假如有 src="./../static/ace/則換為 src="./../static/ace/
     page = [w.replace('src="./../static/', 'src="./../static/') for w in page]
     directory = render_menu2(head, level, page)
@@ -1402,9 +1471,9 @@ def imageaxupload():
         filename = request.args.get("ax-file-name")
         flag = request.args.get("start")
         if flag == "0":
-            file = open(_curdir + "./../images/" + filename, "wb")
+            file = open(_curdir + "/images/" + filename, "wb")
         else:
-            file = open(_curdir + "./../images/" + filename, "ab")
+            file = open(_curdir + "/images/" + filename, "ab")
         file.write(request.stream.read())
         file.close()
         return "image files uploaded!"
@@ -1425,7 +1494,7 @@ def imagelist_access_list(files, starti, endi):
         # images files
         if fileExtension == ".png" or fileExtension == ".jpg" or fileExtension == ".gif":
             outstring += '&lt;input type="checkbox" name="filename" value="' + files[index] + \
-                              '"&gt;&lt;a href="javascript:;" onClick="window.open(\'./../images/' + \
+                              '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/images/' + \
                               files[index] + '\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + \
                               files[index] + '&lt;/a&gt; (' + str(fileSize) + ')&lt;br /&gt;'
     return outstring
@@ -1457,7 +1526,7 @@ a.xhfbfile:hover{
     for index in range(int(starti)-1, int(endi)):
         fileName, fileExtension = os.path.splitext(files[index])
         fileSize = os.path.getsize(image_dir+"/"+files[index])
-        outstring += '''&lt;a class="xhfbfile" href="#" onclick='window.setLink("./../images/'''+ \
+        outstring += '''&lt;a class="xhfbfile" href="#" onclick='window.setLink("/images/'''+ \
                           files[index] + '''",0); return false;'&gt;''' + \
                           files[index] + '''&lt;span style="position: absolute; z-index: 4;"&gt;&lt;br /&gt; \
                           &lt;img src="./../images/''' + files[index] + '''" width="150px"/&gt;&lt;/span&gt;&lt;/a&gt; \
@@ -1673,15 +1742,15 @@ def loadlist_access_list(files, starti, endi, filedir):
         # images files
         if fileExtension == ".png" or fileExtension == ".jpg" or fileExtension == ".gif":
             outstring += '&lt;input type="checkbox" name="filename" value="' + files[index] + \
-                              '"&gt;&lt;a href="javascript:;" onClick="window.open(\'./../downloads/'+ \
+                              '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/downloads/'+ \
                             files[index] + '\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + files[index] + '&lt;/a&gt; (' + str(fileSize)+')&lt;br /&gt;'
         # stl files
         elif fileExtension == ".stl":
-            outstring += '&lt;input type="checkbox" name="filename" value="' + files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/static/viewstl.html?src=./../downloads/' + \
+            outstring += '&lt;input type="checkbox" name="filename" value="' + files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/static/viewstl.html?src=/downloads/' + \
             files[index] + '\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + files[index] + '&lt;/a&gt; ('+str(fileSize)+')&lt;br /&gt;'
         # flv files
         elif fileExtension == ".flv":
-            outstring += '&lt;input type="checkbox" name="filename" value="' + files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/flvplayer?filepath=./../downloads/' + \
+            outstring += '&lt;input type="checkbox" name="filename" value="' + files[index] + '"&gt;&lt;a href="javascript:;" onClick="window.open(\'/flvplayer?filepath=/downloads/' + \
             files[index]+'\',\'images\', \'catalogmode\',\'scrollbars\')"&gt;' + files[index] + '&lt;/a&gt; ('+str(fileSize)+')&lt;br /&gt;'
         # py files
         elif fileExtension == ".py":
@@ -2072,11 +2141,11 @@ def send_file(path):
 
 
 # setup static directory
-#@app.route('./../images/&lt;path:path&gt;')
-@app.route('./../images/&lt;path:path&gt;')
+#@app.route('/images/&lt;path:path&gt;')
+@app.route('/images/&lt;path:path&gt;')
 def send_images(path):
     """send image files"""
-    return send_from_directory(_curdir + "./../images/", path)
+    return send_from_directory(_curdir + "/images/", path)
 
 
 # setup static directory
@@ -2535,4 +2604,46 @@ circle_y = flag_h/2
 ctx.fillStyle='rgb(255, 0, 0)'
 ctx.fillRect(0,0,flag_w,flag_h)
 blueWhite(ctx, circle_x, circle_y, flag_w, flag_h)
-</script><br /> <a href='簡介.html'>Next</a> >> 簡介</div></section></div></body></html>
+</script><br /> <a href='簡介.html'>Next</a> >> 簡介</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../static/chimper/js/jquery-ui.js"></script>
+            <script src="../static/chimper/js/popper.min.js"></script>
+            <script src="../static/chimper/js/bootstrap.min.js"></script>
+            <script src="../static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../static/chimper/js/main.js"></script>
+        </body></html>
+        
