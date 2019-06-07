@@ -3367,7 +3367,17 @@ blueWhite(ctx, circle_x, circle_y, flag_w, flag_h)
 <h2>w1~w9</h2>
 <p><span>w1~w9主要教學內容:github倉儲建立、CMSimfly網頁開發、配置、改版</span></p>
 <p><span>除了ssh連線以及key設定另外拍成影片以外，其他建立倉儲、開啟動態網頁及改版，皆會拍成影片</span></p>
-<h3>PUSH及KEY設定</h3>
+<h3>建立github倉儲</h3>
+<p>本影片介紹如何建立github倉儲，從建立github帳號、建立倉儲，到倉儲設定，都可在影片內看到。</p>
+<p>步驟:</p>
+<p>1.登入github帳號-點擊新增倉儲(repository)-設為公開-命名，建立完成</p>
+<p>2.利用git clone指令將新創的倉儲及示範倉儲(cmsimfly)倉儲內容clone到可攜式系統裡的tmp資料夾</p>
+<p>指令:git clone + 倉儲網址.git</p>
+<p>3.倉儲內setting裡的Github Pages選項:需將Source由None更改成master branch</p>
+<p>4.利用指令git add .、git commit -m ""、git push改版。</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/_q4nU-4M_BI" width="900"></iframe></p><h3>開啟動態網頁並進行改版</h3>
+<p>建立好倉儲以及設定完成後，可利用指令python wsgi.py來開啟動態網頁，在藉由登入後，即可進行編輯網頁動作，注意:每一次的改版皆必須利用指令git add .、git commit -m ""、git push，來進行push的動作</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/hIG-yes-qEQ" width="900"></iframe></p><h3>PUSH及KEY設定</h3>
 <p><strong><span style="color: #ff0000;">關閉操作系統儲存 Github 帳號密碼設定</span></strong><br/><br/><span>目前 KMOL 所使用的 PortableGIT, 內建設定的 credential helper 為 manger, 表示當使用者使用 git push 時內建會跳出讓使用者輸入帳號密碼的對話視窗, 以讓使用者輸入帳號密碼</span><br/><br/><span>我們可使用:</span><span><strong><span style="color: #ff0000;">git config --edit --system</span></strong>指令</span><br/><br/><span>帶出 vi 編輯器, 編輯 git 指令所使用的系統設定, 只要將 credential 項目中的 helper = manager 刪除後儲存, 即可關閉內定將使用者 Github 帳號密碼儲存於操作系統的問題.</span></p>
 <p><span>示範影片如下:</span></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/kW0FOIxfbbI" width="900"></iframe></p>
@@ -3553,11 +3563,8 @@ Host github.com_user2
 <p>https://虛擬主機網址:5443。即可利用虛擬主機開啟fossil網站</p>
 <p><img alt="" height="322" src="/images/5443.png" width="600"/></p>
 <h1>2019_cdb_w5.w13</h1>
-<p><strong><span style="color: #000000;">5/24</span></strong></p>
-<p><strong><span style="color: #000000;">test_1:測試利用w13進行改版，是否會影響到w5內容。</span></strong></p>
-<p><strong><span style="color: #000000;">test_2:測試結果:利用w13資料夾同樣可進行改版，確定push之後，將w13關閉並開啟w5資料夾，進入動態系統後內容停留在w13進行改版後的前一個版本(內容與w13不同步)，可利用指令git pull將遠端最新版本下載到自己的本機端(w5資料夾)，pull完畢後再重新開啟動態網頁即可。</span></strong></p>
-<p></p>
-<h1>期中報告</h1>
+<p><a href="https://drive.google.com/open?id=1_TQBw1PM7jxrmtsBjvLKbjJWfGs8Ug79">2019_cdb_w5.7z</a>及<a href="https://drive.google.com/file/d/12IOfTpupXL0czFM_ZeHt-6sxfXwZK6ai/view?usp=sharing">2019_cdb_w13.7z</a>兩個檔案下載下來解壓縮，並將自己倉儲資料嵌入後，皆可利用指令開啟動態網頁系統進行編輯，版本push之後，若是切換版本(w5-w13)開啟動態網頁進行改版，須先利用指令git pull讓內容進行同步，在開啟動態網頁，即可進行編輯。</p>
+<p><strong><span style="color: #000000;"></span></strong></p><h1>期中報告</h1>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="691" src="https://www.youtube.com/embed/_MrTK2XNEA0" width="1106"></iframe></p>
 <p>學員期中報告影片錄製</p>
 <p>(2019wcmj)學期初到期中上課內容 可利用網誌內容及youtube裡的示範影片進行操作</p>
